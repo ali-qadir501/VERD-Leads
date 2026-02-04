@@ -1,0 +1,7 @@
+{
+  "name": "VERDLeads AI Platform",
+  "description": "An AI-powered B2B Lead Generation platform built with React, Tailwind, and Gemini API Integration.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
