@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Page } from '../types';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   currentPage: Page;
@@ -25,10 +26,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => 
         <a 
           href="#home" 
           onClick={(e) => { e.preventDefault(); onPageChange('home'); }} 
-          className="flex items-center gap-2 text-2xl font-bold text-[#0A2463]"
+          className="hover:opacity-80 transition-opacity"
         >
-          <i className="fas fa-robot text-[#00A878] animate-pulse"></i>
-          <span>VERD<span className="text-[#00A878]">Leads</span></span>
+          <Logo size={36} />
         </a>
 
         {/* Desktop Menu */}

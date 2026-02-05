@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Page } from '../types';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onPageChange: (page: Page) => void;
@@ -11,9 +12,8 @@ export const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
     <footer className="bg-[#1A1A2E] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 mb-16">
         <div>
-          <a href="#home" onClick={(e) => { e.preventDefault(); onPageChange('home'); }} className="flex items-center gap-2 text-3xl font-bold mb-6">
-            <i className="fas fa-robot text-[#00A878]"></i>
-            <span>VERD<span className="text-[#00A878]">Leads</span></span>
+          <a href="#home" onClick={(e) => { e.preventDefault(); onPageChange('home'); }} className="mb-6 block">
+            <Logo size={44} className="brightness-0 invert" />
           </a>
           <p className="text-slate-400 leading-relaxed mb-6">
             AI-Powered B2B Lead Generation agency helping technology companies and professional service firms scale predictably.
@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         </div>
 
         <div>
-          <h4 className="font-bold text-lg mb-6">Services</h4>
+          <h4 className="font-bold text-lg mb-6 text-white">Services</h4>
           <ul className="space-y-4 text-slate-400">
             <li><a href="#services" onClick={() => onPageChange('services')} className="hover:text-[#00A878] transition-colors">What We Do</a></li>
             <li><a href="#" className="hover:text-[#00A878] transition-colors">Our Packages</a></li>
@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         </div>
 
         <div>
-          <h4 className="font-bold text-lg mb-6">Resources</h4>
+          <h4 className="font-bold text-lg mb-6 text-white">Resources</h4>
           <ul className="space-y-4 text-slate-400">
             <li><a href="#" className="hover:text-[#00A878] transition-colors">Blog</a></li>
             <li><a href="#" className="hover:text-[#00A878] transition-colors">Playbooks</a></li>
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         </div>
 
         <div>
-          <h4 className="font-bold text-lg mb-6">Company</h4>
+          <h4 className="font-bold text-lg mb-6 text-white">Company</h4>
           <ul className="space-y-4 text-slate-400">
             <li><a href="#about" onClick={() => onPageChange('about')} className="hover:text-[#00A878] transition-colors">About Us</a></li>
             <li><a href="#leaders" onClick={() => onPageChange('leaders')} className="hover:text-[#00A878] transition-colors">Our Leaders</a></li>
